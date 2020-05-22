@@ -1,0 +1,17 @@
+import smbus
+import time
+
+SW1 = 0x01
+
+.setup(pull_up_down)
+
+bus = smbus.SMBus(1)
+while True:
+
+  if (SW1 == 1):
+    SW1 = bus.read_byte(0x20)
+    print ("1")
+
+  else :
+    SW1 = bus.read_byte(0x20)
+    print ("0")
